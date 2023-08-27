@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.content{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.content__header{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    gap: 1rem;
+}
+
+.content__header div{
+    height: 200px;
+    border-radius: 1rem;
+}
+
+.content__header div:nth-child(1){
+    background-color: #add8e6;
+}
+
+.content__header div:nth-child(2){
+    background-color: #f08080;
+}
+
+.content__body{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr ;
+    gap: 1rem;
+}
+
+.content__body__menu{
+    display: grid;
+    gap: 1rem;
+}
+
+.content__body__menu div{
+    height: 200px;
+    border-radius: 1rem;
+}
+
+.content__body__menu div:nth-child(1){
+    background-color: #90ee90;
+}
+
+.content__body__menu div:nth-child(2){
+    background-color: #ffb6c1;
+}
+
+.content__body__menu div:nth-child(3){
+    background-color: #ffa07a;
+}
+
+.content__body__menu div:nth-child(4){
+    background-color: #20b2aa;
+}
+
+.content__body__menu div:nth-child(5){
+    background-color: #87cefa;
+}
+
+.content__body__menu div:nth-child(6){
+    background-color: #778899;
+}
+
+.content__body__aside{
+    height: 200px;
+    background-color: #000;
+    border-radius: 1rem;
+}
+
+@media (min-width: 600px) {
+    body{
+        background-color: red;
+    }
+
+    .content__header{
+        grid-template-columns: 1fr 1fr;
+        height: 200px;
+    }
+
+    .content__body{
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .content__body__aside{
+        height: auto;
+    }
+}
+
+@media (min-width: 780px) {
+    body{
+        background-color: green;
+    }
+
+    .content__body__menu{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1000px) {
+    body{
+        background-color: blue;
+    }
+
+    .content__body__menu{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .content__body{
+        grid-template-columns: 2.5fr 1fr;
+    }
+
+    .container{
+        padding: 2rem;
+    }
+}
